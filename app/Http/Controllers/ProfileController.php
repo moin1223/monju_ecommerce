@@ -11,7 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\ProfileUpdateRequest;
-
+use App\Models\User;
 
 class ProfileController extends Controller
 {
@@ -65,36 +65,28 @@ class ProfileController extends Controller
 
     public function editProfile()
     {
-        $userDetails = UserDetails::where('user_id', auth()->user()->id)->first();
-        return view('website.pages.profile.edit-profile', compact('userDetails'));
+
+        $user = auth()->user();
+
+        return view('website.pages.profile.edit-profile', compact('user'));
     }
     public function updateProfile(ProfileUpdateRequest $request)
     {
 
         // dd($request->all());
 
-        $userDetails = UserDetails::where('user_id', auth()->user()->id)->first();
-        // dd($userDetails);
-        if ($userDetails) {
+        $user = auth()->user();
+        if ($user) {
             if ($request->hasFile('image')) {
-                if ($userDetails->image) {
-                    $filename = substr($userDetails->image, 17);
+                if ($user->image) {
+                    $filename = substr($user->image, 17);
                     Storage::delete('public/user/' . $filename);
                 }
             }
-            $image = $request->hasFile('image') ? Storage::url($request->image->store('public/user')) : $userDetails->image;
-            $userDetails->update([
-                'address' => $request->address,
-                'contact_number' => $request->contact_number,
+            $image = $request->hasFile('image') ? Storage::url($request->image->store('public/user')) : $user->image;
+            $user->update([
                 'image' => $image,
-            ]);
-        } else {
-            $image = $request->hasFile('image') ? Storage::url($request->image->store('public/user')) : null;
-            UserDetails::create([
-                'address' => $request->address,
-                'contact_number' => $request->contact_number,
-                'image' => $image,
-                'user_id' => auth()->user()->id
+                'name' => $request->name,
             ]);
         }
         return redirect()->back()->with(['message' => 'Profile updated successfully', 'alert-type' => 'success']);

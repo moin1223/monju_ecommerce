@@ -61,7 +61,17 @@
                                             <td>{{ $order->name }}</td>
                                             <td>{{ $order->address}}</td>
                                             <td>{{ $order->mobile_no }}</td>
-                                            <td>{{ $order->status }}</td>
+                                            <td>
+                                                @if($order->status == 'pending')
+                                                    <span class="badge bg-warning">{{ $order->status }}</span>
+                                                @elseif($order->status == 'delivered')
+                                                    <span class="badge bg-info">{{ $order->status }}</span>
+                                                @elseif($order->status == 'completed')
+                                                    <span class="badge bg-success">{{ $order->status }}</span>
+                                                @else
+                                                    <span class="badge bg-danger">{{ $order->status }}</span>
+                                                @endif
+                                            </td>
                                             <td>
                                                 <div class="action_btns d-flex">
                                                     <a href="{{ route('order.edit', $order->id) }}"

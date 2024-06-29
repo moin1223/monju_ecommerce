@@ -4,7 +4,6 @@ use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\OrderController;
-use App\Http\Controllers\ProductCodeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SliderController;
@@ -32,6 +31,14 @@ Route::controller(OrderController::class)->prefix('order')->name('order.')->grou
 
 });
 Route::group(['middleware' => ['auth', 'role:admin']], function () {
+
+    Route::controller(ProfileController::class)->group(function () {
+        Route::get('/profiles', 'editProfile')->name('profile.edit');
+        Route::put('update-profile', 'updateProfile')->name('profile.update');
+    
+        Route::get('/change-password', 'changePassword')->name('change_password');
+        Route::put('/update-password', 'updatePassword')->name('update_password');
+    });
 Route::controller(OrderController::class)->prefix('order')->name('order.')->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/{id}/edit', 'edit')->name('edit');

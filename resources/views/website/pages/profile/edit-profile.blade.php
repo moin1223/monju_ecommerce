@@ -14,7 +14,7 @@
                         <div class="main-title">
                             <h2 class="m-0">Profile</h2>
                             <img id="imgPreview" class="rounded-circle mt-3"
-                                src="{{ $userDetails->image ?? asset('assets/img/blank.png') }}"
+                                src="{{ $user->image ?? asset('assets/img/blank.png') }}"
                                 style="width: 100px; height: 100px; object-fit: cover;" alt="">
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                         <div class="my-3">
                             <label class="form-label" for="name">Name</label>
                             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
-                                id="name" placeholder="Enter name" value="{{ auth()->user()->name }}" disabled />
+                                id="name" placeholder="Enter name" value="{{ auth()->user()->name }}"  />
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -51,29 +51,7 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="name">Address</label>
-                            <input type="text" name="address" class="form-control @error('address') is-invalid @enderror"
-                                id="name" placeholder="Enter address" value="{{ $userDetails->address ?? '' }}"
-                                required />
-                            @error('address')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label" for="name">Contact Number</label>
-                            <input onkeypress="return onlyNumberKey(event)" type="text" name="contact_number"
-                                class="form-control @error('contact_number') is-invalid @enderror" id="name"
-                                placeholder="Enter contact number" value="{{ $userDetails->contact_number ?? '' }}"
-                                required />
-                            @error('contact_number')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
+
                         <button type="submit" class="btn btn-primary">
                             Submit
                         </button>
