@@ -1,13 +1,13 @@
 <nav class="sidebar dark_sidebar">
     <div class="logo d-flex justify-content-between">
         <a class="large_logo" href="index.html">
-            <img class="ms-5" src="{{ asset('/frontend/images/Dream-Walkers-Logo.png') }}" alt="Dream-Walkers"
+            <img class="ms-5" src="{{ asset('/frontend/images/logomonju.jpeg') }}" alt="Dream-Walkers"
                 style="width: 100px; height: auto;">
 
 
         </a>
         <a class="small_logo" href="index.html">
-            <img src={{ asset('/frontend/images/Dream-Walkers-Logo.png') }} alt="Dream-Walkers"
+            <img src={{ asset('/frontend/images/logomonju.jpeg') }} alt="Dream-Walkers"
                 style="width: 50px; height: auto;">
         </a>
         <div class="sidebar_close_icon d-lg-none">

@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\userDetails;
+
 
 
 class User extends Authenticatable
@@ -54,11 +54,5 @@ class User extends Authenticatable
     ];
 
     // protected $guard_name = 'api';
-    // public $guard_name = 'api';
-
-    public function userDetails()
-    {
-        return $this->hasOne(userDetails::class);
-    }
 
 }
