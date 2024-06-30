@@ -30,6 +30,8 @@ body {
 :root {
   --primarycolor: '#176B87';
 }
+ 
+
 .buttonBgColor {
   background-color: #1c0a00;
   color: #f8f8f8 !important;
@@ -73,10 +75,11 @@ body {
 
 .navbar-collapse,
 .navbar {
-  padding: 16px;
+  padding: 10px;
 }
 .navbar-toggler {
-  background-color: white !important;
+  /* background-color: white !important; */
+  background-color: none;
 }
 .cartToggle {
   display: flex;
@@ -90,19 +93,33 @@ body {
   color: white;
 }
 .cart {
-  background-color: #f8f8f8;
-  color: #3a6f21;
+  /* background-color: #f8f8f8; */
+  color: #ffffff;
   /* color: #785027; */
+  position: relative;
   padding: 4px 15px;
   align-items: center;
   justify-content: center;
   display: flex;
 }
 .cart h6 {
+  position: absolute;
+  top: -1px;
+  background-color: #ffffff;
+  color: #3a6f21;
+  padding: 4px;
+  border-radius: 50%;
+  right: -1px;
   margin: 0 auto;
-  font-size: 24px;
+  font-size: 10px;
+  height: 20px;
+  width: 20px;
   font-weight: 600;
   margin-left: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .cart i {
   font-size: 24px;
@@ -297,6 +314,7 @@ body {
 
 .bottomFooter a {
   text-align: center;
+  
   color: #e8e8e8;
 }
 .footerH4 h4 {
@@ -475,19 +493,19 @@ body {
     margin-top: 125px;
   }
   .carousel-item {
-    height: 450px;
+    height: 350px;
   }
   .carousel-item img {
-    height: 450px;
+    height: 350px;
   }
 }
 
 @media screen and (min-width: 991px) and (max-width: 2690px) {
   .carousel-item {
-    height: 450px;
+    height: 350px;
   }
   .carousel-item img {
-    height: 450px;
+    height: 350px;
   }
   .carousel-control-prev,
   .carousel-control-next {
@@ -501,5 +519,8 @@ body {
   }
   #header {
     margin-top: 175px;
+  }
+  .cartBoxlarge {
+    display: none !important;
   }
 }

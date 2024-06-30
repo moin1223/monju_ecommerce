@@ -36,8 +36,62 @@
                   <a href="">Designed and Developed by Kutub Uddin</a>
                 </div>
               </footer>
-              
             </div>
+               <!-- underFooter -->
+      <div id="underFooter">
+        <div class="d-flex justify-content-center align-content-center">
+          <div class="d-flex justify-content-between  overFooter align-content-center w-75">
+              <div>
+                <a href="tel:0043245345">
+                  <button type="button" class="btn overFooterBg position-relative">
+                    <i class="bi bi-telephone"></i>
+                  </button>
+                  
+                </a>
+              </div>
+            <div>
+              <a href="https://wa.me/01987493345" target="_blank" rel="noopener noreferrer">
+                <button type="button" class="btn overFooterBg position-relative">
+                  <i class="bi bi-whatsapp "></i> 
+                </button>
+              </a>
+            </div>
+            {{-- <a href="{{ route('cart.show') }}">
+              <div class="cart align-items-center cartBoxlarge">
+                <i class="bi bi-basket-fill cartIcon"></i>
+                <h6 class="cart-quantity">{{ $cartLength }}</h6>
+              </div>
+              </a> --}}
+            
+            <button type="button" class="btn  position-relative overFooterBg">
+              <a href="{{ route('cart.show') }}">
+              <div class="cart align-items-center cartBoxlarge">
+                <i class="bi bi-basket-fill cartIcon"></i>
+                <h6 class="cart-quantity">{{ $cartLength }}</h6>
+              </div>
+              </a>
+            </button>
+            <button type="button" class="btn  position-relative overFooterBg"
+            type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="bi bi-list"></i> 
+            </button>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- scrolldown  -->
+      <div id="scrolldown">
+        <div class="scrollDownIcon">
+          <i class="bi bi-arrow-up"></i>
+        </div>
+      </div>
 
 
             

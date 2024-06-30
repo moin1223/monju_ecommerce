@@ -154,3 +154,26 @@
 //   attachEventListeners();
 //   updateTotals(); // Initial calculation
 // });
+
+// scroll down 
+document.addEventListener('DOMContentLoaded', function() {
+    var scrollDownButton = document.getElementById('scrolldown');
+  
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        scrollDownButton.style.bottom = '40px'; 
+        scrollDownButton.style.right = '10px'; 
+      } else {
+        scrollDownButton.style.bottom = '-50px';
+      }
+    });
+  
+  
+    scrollDownButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  });
