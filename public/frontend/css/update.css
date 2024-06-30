@@ -1,0 +1,180 @@
+.searchBtn{
+  background-color: #1c0a00;
+  color: white;
+}
+
+.navbar-toggler-icon{
+  background-color: white;
+  height: 20px !important;
+  width: 20px !important;
+  
+}
+  .cartToggle {
+    display: flex;
+    background-color: white;
+    padding: 10px;
+    color: #3a6f21;
+}
+  
+  .buttonBgColor {
+    /* background-color: #1c0a00; */
+    background-color: none !important;
+    color: #f8f8f8 !important;
+    font-weight: 500;
+    padding: 4px 6px;
+    border: none;
+  }
+  .primaryBgColor {
+    /* background: #785027; */
+    background: #3a6f21;
+    width: 100%;
+  }
+
+  .cart {
+    /* background-color: #f8f8f8; */
+    color: #ffffff;
+    /* color: #785027; */
+    position: relative;
+    padding: 4px 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .cart h6 {
+    position: absolute;
+    top: -1px;
+    background-color: #ffffff;
+    color: #3a6f21;
+    padding: 4px;
+    text-align: center;
+    border-radius: 50%;
+    right: -1px;
+    margin: 0 auto;
+    font-size: 10px;
+    height: 20px;
+    width: 20px;
+    font-weight: 600;
+    margin-left: 8px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .buttonBgColor {
+    background-color: #1c0a00;
+    /* background-color: none !important; */
+    color: #f8f8f8 !important;
+    font-weight: 500;
+    padding: 4px 6px;
+    border: none;
+  }
+
+  .menuBtn {
+    background-color: white;
+  }
+
+  #underFooter{
+    background-color: rgb(248, 247, 247);
+    padding: 2px 10px;
+    z-index: 100;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+
+  /* #scrolldown{
+    display: flex;
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #3a6f21;
+    bottom:60px;
+    right: 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+} */
+
+#scrolldown {
+    position: fixed;
+    bottom: -50px; 
+    right: 20px; 
+    transition: bottom 0.3s ease; 
+    z-index: 999;
+  }
+  
+  .scrollDownIcon {
+    width: 40px;
+    height: 40px; 
+    background-color: #3a6f21;
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: pulse 1s infinite alternate;
+  }
+  
+  .scrollDownIcon i {
+    color: white;
+    font-size: 15px; /* Adjust icon size as needed */
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+     
+    }
+    to {
+      transform: scale(1.1);
+    
+    }
+  }
+  
+  
+
+  .overFooterBg i {
+    color: #3a6f21;
+    font-weight: 800;
+    font-size: larger;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+  }
+  .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+}
+
+
+  @media  (min-width: 991px) {
+    #underFooter{
+        display: none;
+      }
+  }
+ 
+  
+ 
+  

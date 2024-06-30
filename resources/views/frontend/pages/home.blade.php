@@ -48,16 +48,21 @@
                         </div>
                         <span class="my-4">{{ $product->weight }}</span>
                         <div class="position-absoulate hoverProducts">
-                            <form action="{{ route('cart.add', $product->id) }}" method="POST">
-                                @csrf
-                                {{-- <input type="number" name="quantity" value="1" min="1"> --}}
-                                <button type="submit" class="buttonBgColor addToCart" id="addToCart" {{ $product->stock == "no" ? 'disabled' : '' }}>
-                                    <i class="bi bi-basket-fill cartIcon"></i> Add to Cart
-                                </button>
-                            </form>
+                            <div class="d-flex">
+                                <form action="{{ route('cart.add', $product->id) }}" method="POST">
+                                    @csrf
+                       
+                                    <button type="submit" class="buttonBgColor addToCart" id="addToCart" {{ $product->stock == "no" ? 'disabled' : '' }}>
+                                        <i class="bi bi-basket-fill cartIcon"></i> Add to Cart
+                                    </button>
+                                </form>
+                                <a href="{{ route('product-details',$product->id) }}">
+                                    <button class="buttonBgColor addToCart">Details</button></a>
+
+                            </div>
+                   
                   
-                            <a href="{{ route('product-details',$product->id) }}">
-                                <button class="buttonBgColor addToCart">Details</button></a>
+                     
                         </div>
                         <a href="{{ route('order.create',$product->id) }}">
                             <button class="orderNow" id="orderNow" {{ $product->stock == "no" ? 'disabled' : '' }}>অর্ডার করুন</button>
