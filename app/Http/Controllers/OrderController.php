@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderMail;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Rules\BangladeshMobileNumber;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -72,7 +74,7 @@ $request->validate([
 ]);
 
 // Create a new order
-$order = Order::create([
+$data = Order::create([
     'name' => $request->name,
     'address' => $request->address,
     'mobile_no' => $request->mobile_no,
@@ -86,12 +88,17 @@ $order = Order::create([
 // Create order items
 foreach ($request->items as $item) {
     OrderItem::create([
-        'order_id' => $order->id,
+        'order_id' => $data->id,
         'product_id' => $item['product_id'],
         'quantity' => $item['quantity'],
         'sub_total' => $item['sub_total'],
     ]);
 }
+    // send mail
+    $send_mail = 'moinpuccse@gmail.com';
+    Mail::to($send_mail)->send(new OrderMail($data));
+
+
 Session::forget('cart');
 
 return redirect()->route('home-page')->with('message', 'Order created successfully!');
