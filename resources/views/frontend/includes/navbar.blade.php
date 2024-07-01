@@ -2,7 +2,7 @@
 <section class="primaryBgColor mx-auto navSection">
     <div class="primaryBgColor">
       <h1 class="text-center directCall" direction="left">
-        সরাসরি অর্ডার করতে যোগাযোগ করুন-01600000000
+        সরাসরি অর্ডার করতে যোগাযোগ করুন-01876506993
       </h1>
   
       <nav class="navbar navbar-expand-lg align-items-center">

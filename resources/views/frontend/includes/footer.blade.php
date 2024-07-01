@@ -42,7 +42,7 @@
         <div class="d-flex justify-content-center align-content-center">
           <div class="d-flex justify-content-between  overFooter align-content-center w-75">
               <div>
-                <a href="tel:0043245345">
+                <a href="tel:01876506993">
                   <button type="button" class="btn overFooterBg position-relative">
                     <i class="bi bi-telephone"></i>
                   </button>
@@ -50,7 +50,7 @@
                 </a>
               </div>
             <div>
-              <a href="https://wa.me/01987493345" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/01876506993" target="_blank" rel="noopener noreferrer">
                 <button type="button" class="btn overFooterBg position-relative">
                   <i class="bi bi-whatsapp "></i> 
                 </button>

@@ -36,7 +36,7 @@
                     </div>
                     <!-- number  -->
                     <div class="d-block persionalInput">
-                        <input type="number" name="mobile_no" id="number" value="{{ old('mobile_no') ? old('mobile_no') : '' }}" required  placeholder="মোবাইল নাম্বার" />
+                        <input type="text" name="mobile_no" value="{{ old('mobile_no') ? old('mobile_no') : '' }}" required  placeholder="মোবাইল নাম্বার" />
                         @error('mobile_no')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
