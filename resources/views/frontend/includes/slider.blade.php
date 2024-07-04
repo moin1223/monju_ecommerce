@@ -6,7 +6,7 @@
 <div id="header">
     <!-- carousel part  -->
 </div>
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleAutoplaying" class="carousel slide carousel-margin" data-bs-ride="carousel">
     <div class="carousel-inner carouselImg">
         @foreach ($sliders as $slider)
             <div class="carousel-item active">
