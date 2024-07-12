@@ -15,9 +15,16 @@ class BangladeshMobileNumber implements Rule
      */
     public function passes($attribute, $value)
     {
-        // Regex pattern to validate Bangladeshi mobile numbers
-        $pattern = '/^(?:\+?88)?01[3-9]\d{8}$/';
-        return preg_match($pattern, $value);
+          
+        $banglaToEnglish = [
+            '০' => '0', '১' => '1', '২' => '2', '৩' => '3', '৪' => '4',
+            '৫' => '5', '৬' => '6', '৭' => '7', '৮' => '8', '৯' => '9'
+        ];
+
+        $value = strtr($value, $banglaToEnglish);
+
+        
+        return preg_match('/^(?:\+88|88)?(01[3-9]\d{8})$/', $value);
     }
 
     /**

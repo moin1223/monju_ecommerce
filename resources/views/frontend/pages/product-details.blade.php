@@ -18,6 +18,12 @@
             font-family: Arial, sans-serif;
             border-radius: 10px; /* Rounded corners */
     }
+ 
+        .full-width-text {
+            width: 100%;
+            word-wrap: break-word; /* Ensures the text will wrap */
+        }
+
 </style>
 
 @section('content')
@@ -43,7 +49,7 @@
 
                     <div class="col">
                         <div class="p-2">
-                            <h4>{{ $productDetails->product_name }} {{ $productDetails->product_name }} {{ $productDetails->weight }}</h4>
+                            <h4>{{ $productDetails->product_name }}</h4>
                             <div class="d-flex align-items-center w-100 detailsPrice">
                                 <h6 class="text-decoration-line-through">৳{{ $productDetails->old_price }}</h6>
                                 <h5 class="ml-4">৳{{ $productDetails->new_price }}</h5>
@@ -59,7 +65,7 @@
                                 </a>
                             </div>
                             <div class="w-100 text-center contactNo">
-                                <h4>প্রয়োজনে কল করুন - 01800-000000</h4>
+                                <h4>প্রয়োজনে কল করুন - 01876506993</h4>
                             </div>
                             <p class="note">
                                 প্রিয় ক্রেতা, অর্ডার করার আগে প্রোডাক্টি সম্পর্কে ভালো মত জানুন , প্রয়োজনে কল করে জানতে
@@ -92,32 +98,31 @@
 <!-- products Gallary  -->
 <div class="col descriptionContainer">
     <div class="p-2">
-        <h1 class="border-bottom">Cartificate and Review</h1>
-        <div class="row row-cols-lg-2 row-cols-md-2 row-cols-1 g-2">
-            @if ($productDetails->cartificate_1)
-                <div class="col">
+        @if ($productDetails->cartificate_1)
+     
+            <p class="note">
+                আমাদের এই পণ্য বাংলাদেশে science ল্যাব কতৃক পরীক্ষিত 
+                এবং অনুমোদন প্রাপ্ত। ১০০%পার্সেন্ট সাইড ইফেক্ট মুক্ত ফুড সাপ্লিমেন্ট।
+            </p>
+            <h4 class="fw-bold"><i class="bi bi-award-fill award-icon"></i>Cartifacate<i class="bi bi-award-fill award-icon"></i> </h4>
+
+        <div class="row row-cols-lg-2 row-cols-md-2 row-cols-1 g-2 mb-4">
+                           <div class="col">
                     <div class="p-2 productsGallaryImg">
                         <img src="{{ $productDetails->cartificate_1 }}" class="d-block w-100"
                             alt="..." />
                     </div>
                 </div>
             @endif
-            @if ($productDetails->cartificate_2)
-                <div class="col">
-                    <div class="p-2 productsGallaryImg">
-                        <img src="{{ $productDetails->cartificate_2 }}" class="d-block w-100"
-                            alt="..." />
-                    </div>
-                </div>
-            @endif
-            @if ($productDetails->cartificate_3)
-                <div class="col">
-                    <div class="p-2 productsGallaryImg">
-                        <img src="{{ $productDetails->cartificate_3 }}" class="d-block w-100"
-                            alt="..." />
-                    </div>
-                </div>
-            @endif
+
+        </div>
+
+
+
+
+        <h4 class="fw-bold "><i class="bi bi-star-fill award-icon"></i>Review<i class="bi bi-star-fill award-icon"></i></h4>
+        <div class="row row-cols-lg-2 row-cols-md-2 row-cols-1 g-2">
+        
             @if ($productDetails->review_1)
                 <div class="col">
                     <div class="p-2 productsGallaryImg">
@@ -138,6 +143,22 @@
                 <div class="col">
                     <div class="p-2 productsGallaryImg">
                         <img src="{{ $productDetails->review_3 }}" class="d-block w-100"
+                            alt="..." />
+                    </div>
+                </div>
+            @endif
+            @if ($productDetails->cartificate_2)
+                <div class="col">
+                    <div class="p-2 productsGallaryImg">
+                        <img src="{{ $productDetails->cartificate_2 }}" class="d-block w-100"
+                            alt="..." />
+                    </div>
+                </div>
+            @endif
+            @if ($productDetails->cartificate_3)
+                <div class="col">
+                    <div class="p-2 productsGallaryImg">
+                        <img src="{{ $productDetails->cartificate_3 }}" class="d-block w-100"
                             alt="..." />
                     </div>
                 </div>

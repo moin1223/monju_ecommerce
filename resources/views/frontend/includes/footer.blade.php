@@ -50,7 +50,7 @@
                 </a>
               </div>
             <div>
-              <a href="https://wa.me/01876506993" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/8801876506993" target="_blank" rel="noopener noreferrer">
                 <button type="button" class="btn overFooterBg position-relative">
                   <i class="bi bi-whatsapp "></i> 
                 </button>

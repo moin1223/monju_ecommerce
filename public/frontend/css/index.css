@@ -478,6 +478,10 @@ body {
 .cashDelivary {
   margin-left: 10px;
 }
+.award-icon{
+ 
+  color: rgb(247, 178, 6);
+}
 
 @media screen and (min-width: 200px) and (max-width: 467px) {
   #header {
