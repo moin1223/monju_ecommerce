@@ -52,7 +52,7 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    {{-- <div class="container"> --}}
         <div class="white_card card_height_100 mb_30">
             <div class="white_card_header">
                 <div class="container">
@@ -88,18 +88,7 @@
                                             <td>{{ $item->sub_total }}</td>
                                         </tr>
                                         @endforeach
-                                        {{-- <tr>
-                                            <td>Product 2</td>
-                                            <td>$15.00</td>
-                                            <td>1</td>
-                                            <td>$15.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Product 3</td>
-                                            <td>$5.00</td>
-                                            <td>3</td>
-                                            <td>$15.00</td>
-                                        </tr> --}}
+    
                                         <tr class="total-row">
                                             <td colspan="3" class="text-right"><strong>Total:</strong></td>
                                             <td><strong>{{ $order->sub_total }}</strong></td>
@@ -151,7 +140,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    {{-- </div> --}}
 @endsection
 
 @section('content-js')

@@ -38,9 +38,9 @@ class FrontendController extends Controller
 
         $query = $request->input('query');
         $products = Product::orderBy('id', 'desc')
-            ->where('product_name', 'LIKE', "%{$query}%")
-            ->paginate(10)
-            ->appends($request->all());
+        ->where('product_name', 'LIKE', "%{$query}%")
+        ->get();
+    
         // dd($products);
         return view('frontend.pages.home', compact('products'));
     }
